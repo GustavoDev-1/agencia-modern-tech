@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços | Modern Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .services-hero {
+            padding: 100px 8% 60px;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 8% 100px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 50px 30px;
+            border-radius: 25px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(247, 108, 108, 0.1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            margin-bottom: 25px;
+            color: var(--primary);
+            border: 1px solid rgba(247, 108, 108, 0.2);
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .service-card p {
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .service-features {
+            list-style: none;
+            text-align: left;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .service-features li {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .service-features li::before {
+            content: "✓";
+            color: var(--secondary);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* Seção de CTA Final */
+        .cta-box {
+            margin: 0 8% 100px;
+            padding: 60px;
+            background: linear-gradient(135deg, var(--card-bg) 0%, #2c3e50 100%);
+            border-radius: 30px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">MODERN<span>TECH</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="contato.html" class="btn-nav">Fale Conosco</a></li>
+        </ul>
+    </nav>
+
+    <header class="services-hero">
+        <h1 class="gradient-text" style="font-size: 3.5rem;">O que fazemos <span style="color: white;">de melhor.</span></h1>
+        <p style="max-width: 600px; margin: 20px auto; color: rgba(255,255,255,0.7);">
+            Soluções completas para transformar sua presença digital em uma máquina de resultados.
+        </p>
+    </header>
+
+    <section class="services-grid">
+        <div class="service-card">
+            <div class="service-icon">🎨</div>
+            <h3>Web Design</h3>
+            <p>Interfaces exclusivas focadas na experiência do usuário e na identidade da sua marca.</p>
+            <ul class="service-features">
+                <li>Design Responsivo</li>
+                <li>Foco em UX/UI</li>
+                <li>Protótipos Interativos</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3>Desenvolvimento</h3>
+            <p>Sistemas robustos e velozes utilizando as tecnologias mais modernas do mercado.</p>
+            <ul class="service-features">
+                <li>Sites e Web Apps</li>
+                <li>E-commerce (Shopify/Woo)</li>
+                <li>Otimização de Performance</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🚀</div>
+            <h3>SEO & Performance</h3>
+            <p>Estratégias para colocar seu negócio no topo do Google e atrair clientes qualificados.</p>
+            <ul class="service-features">
+                <li>Análise de Palavras-chave</li>
+                <li>SEO On-page</li>
+                <li>Google Analytics</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="cta-box">
+        <h2 style="margin-bottom: 20px;">Precisa de uma solução <span class="gradient-text">personalizada?</span></h2>
+        <p style="margin-bottom: 35px; color: rgba(255,255,255,0.7);">Vamos conversar sobre como podemos escalar o seu negócio digital.</p>
+        <a href="contato.html" class="btn-primary">Solicitar Orçamento Grátis</a>
+    </section>
+
+</body>
+</html>
