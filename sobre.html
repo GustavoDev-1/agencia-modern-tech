@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Modern Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para a página Sobre */
+        .about-hero {
+            padding: 100px 8% 60px;
+            text-align: center;
+        }
+
+        .about-content {
+            padding: 40px 8%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px; /* Aumentado para dar espaço */
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .about-content { grid-template-columns: 1fr 1fr; align-items: center; }
+        }
+
+        .about-text h2 { margin-bottom: 25px; font-size: 2.2rem; }
+        .about-text p { color: rgba(255,255,255,0.7); margin-bottom: 20px; font-size: 1.1rem; }
+
+        /* Seção de Valores */
+        .values-section {
+            padding: 80px 8%;
+            background: rgba(255, 255, 255, 0.02);
+            text-align: center;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .value-card {
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+        }
+
+        .value-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .value-card h3 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        /* Foto/Logo */
+        .image-container {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(145deg, #34495e, #2c3e50);
+            border-radius: 30px;
+            border: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-container::after {
+            content: "Modern Tech";
+            color: rgba(247, 108, 108, 0.1);
+            font-size: 5rem;
+            font-weight: 900;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">MODERN<span>TECH</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html" class="btn-nav">Fale Conosco</a></li>
+        </ul>
+    </nav>
+
+    <header class="about-hero">
+        <h1 class="gradient-text" style="font-size: 3.5rem;">Nossa <span style="color: white;">Missão.</span></h1>
+        <p style="max-width: 700px; margin: 25px auto; font-size: 1.2rem; color: rgba(255,255,255,0.8);">
+            A Modern Tech não é apenas uma agência de código. Somos contadores de histórias digitais focados no impacto humano.
+        </p>
+    </header>
+
+    <section class="about-content">
+        <div class="image-container">
+            <span style="z-index: 1; color: var(--primary); font-weight: bold;">[ VISUAL CRIATIVO ]</span>
+        </div>
+
+        <div class="about-text">
+            <h2>Tecnologia com <span class="gradient-text">Alma</span></h2>
+            <p>Nascemos da percepção de que o mercado estava ficando frio. Muitos sites parecem iguais, feitos por máquinas para máquinas.</p>
+            <p>Nosso propósito é devolver o calor às interfaces. Usamos cores vibrantes, design intuitivo e tecnologias de ponta para garantir que seu projeto seja memorável.</p>
+            
+            <a href="contato.html" class="btn-primary" style="margin-top: 10px;">Conhecer mais</a>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <h2 style="font-size: 2.5rem;">Nossos <span class="gradient-text">Valores</span></h2>
+        
+        <div class="values-grid">
+            <div class="value-card">
+                <span class="value-icon">💡</span>
+                <h3>Criatividade</h3>
+                <p>Não entregamos o óbvio. Buscamos soluções que destaquem sua marca no mar da mesmice.</p>
+            </div>
+
+            <div class="value-card">
+                <span class="value-icon">⚡</span>
+                <h3>Agilidade</h3>
+                <p>O mundo digital não espera. Trabalhamos com processos eficientes para colocar seu projeto no ar.</p>
+            </div>
+
+            <div class="value-card">
+                <span class="value-icon">🤝</span>
+                <h3>Transparência</h3>
+                <p>Parceria real. Você participa de cada etapa, sem termos técnicos complicados ou letras miúdas.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 80px 0;">
+        <p style="margin-bottom: 30px; color: rgba(255,255,255,0.5);">Pronto para começar sua jornada digital?</p>
+        <div class="hero-btns">
+            <a href="index.html" class="btn-secondary">Voltar para Home</a>
+            <a href="contato.html" class="btn-primary">Fale com a gente</a>
+        </div>
+    </footer>
+
+</body>
+</html>
