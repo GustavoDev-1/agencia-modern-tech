@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Projeto | Modern Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-hero {
+            padding: 100px 10%;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #3d566e 100%);
+            text-align: center;
+        }
+        .project-content {
+            max-width: 900px;
+            margin: -50px auto 80px;
+            background: var(--card-bg);
+            padding: 50px;
+            border-radius: 30px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+        .main-image {
+            width: 100%;
+            height: 450px;
+            background: #2c3e50;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .stat-item h4 { color: var(--primary); margin-bottom: 5px; }
+        .description h2 { margin-bottom: 20px; }
+        .description p { color: rgba(255,255,255,0.7); margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">MODERN<span>TECH</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html" class="btn-nav">Fale Conosco</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-hero">
+        <h1 class="gradient-text" id="titulo-projeto">Nome do Projeto</h1>
+        <p id="categoria-projeto">Categoria do Projeto</p>
+    </header>
+
+    <main class="project-content">
+        <div class="main-image">
+            <span style="opacity: 0.3;">[ Espaço para o Print do Site ]</span>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h4 id="cliente">Cliente</h4>
+                <p>Nome da Empresa</p>
+            </div>
+            <div class="stat-item">
+                <h4 id="tecnologia">Tecnologia</h4>
+                <p>HTML / CSS / JS</p>
+            </div>
+            <div class="stat-item">
+                <h4 id="ano">Ano</h4>
+                <p>2026</p>
+            </div>
+        </div>
+
+        <div class="description">
+            <h2>Sobre o <span class="gradient-text">Desafio</span></h2>
+            <p>Neste projeto, o objetivo principal era criar uma interface que conectasse o público-alvo aos valores da marca através de um design vibrante e intuitivo.</p>
+            <p>Trabalhamos na escolha de uma paleta de cores que transmitisse confiança e energia, garantindo que a navegação fosse fluida em dispositivos móveis e desktops.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="portfolio.html" class="btn-secondary">← Voltar ao Portfólio</a>
+            <a href="contato.html" class="btn-primary" style="margin-left: 15px;">Quero um projeto assim</a>
+        </div>
+    </main>
+
+</body>
+</html>
