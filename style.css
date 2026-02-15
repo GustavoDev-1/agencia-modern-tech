@@ -1,0 +1,201 @@
+/* VARIÁVEIS DE COR - PALETA VIBRANTE */
+:root {
+    --primary: #F76C6C;       /* Coral */
+    --secondary: #FFC06A;     /* Âmbar */
+    --bg-dark: #2c3e50;       /* Azul Petróleo */
+    --card-bg: #34495e;       /* Cinza Azulado */
+    --text-light: #ecf0f1;    /* Branco Gelo */
+    --border: rgba(255, 255, 255, 0.1);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* RESET E CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita barra de rolagem lateral no mobile */
+}
+
+/* NAVBAR COM MAIS RESPIRO */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5%; /* Aumentado para 25px de altura */
+    background: var(--bg-dark);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-size: 1.5rem; font-weight: 700; }
+.logo span { color: var(--primary); }
+
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { text-decoration: none; color: var(--text-light); font-size: 0.9rem; }
+
+/* HERO SECTION - ESPAÇAMENTO PARA MOBILE */
+.hero {
+    padding: 80px 10% 60px; /* Mais espaço nas laterais e no topo */
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem; /* Tamanho ajustado para mobile */
+    margin-bottom: 25px; /* Espaço abaixo do título */
+    line-height: 1.2;
+}
+
+.hero p {
+    margin-bottom: 35px; /* Espaço antes dos botões */
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+}
+
+/* AJUSTE DOS BOTÕES (AQUILO QUE ESTAVA GRUDADO NA FOTO) */
+.hero-btns {
+    display: flex;
+    flex-direction: column; /* Um embaixo do outro no mobile */
+    gap: 15px; /* ESPAÇO REAL ENTRE OS BOTÕES */
+    align-items: center;
+}
+
+/* Se a tela for maior (PC), os botões ficam lado a lado */
+@media (min-width: 768px) {
+    .hero-btns {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    .hero h1 { font-size: 4rem; }
+}
+
+.btn-primary, .btn-secondary {
+    padding: 16px 30px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    width: 100%; /* Ocupa largura no mobile */
+    max-width: 280px;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+    box-shadow: 0 5px 15px rgba(247, 108, 108, 0.4);
+}
+
+.btn-secondary {
+    border: 2px solid var(--primary);
+    color: var(--text-light);
+    background: transparent;
+}
+
+/* CARDS DO PORTFÓLIO - MAIS DISTÂNCIA */
+.portfolio-grid {
+    padding: 40px 10%;
+    display: grid;
+    gap: 40px; /* Espaço entre os cards */
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 25px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px; /* Margem extra de segurança */
+}
+
+.project-image {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.1);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.project-info {
+    padding: 30px; /* Espaço interno para o texto não bater na borda */
+}
+
+.project-info h3 {
+    margin: 15px 0; /* Espaço em cima e embaixo do título */
+    font-size: 1.6rem;
+}
+
+.project-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background: rgba(255,255,255,0.05);
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 15px; /* Distância antes do link "Visualizar" */
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* TEXTO COM GRADIENTE */
+.gradient-text {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: var(--bg-dark);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 10px; /* Espaço menor entre os itens para caber tudo */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.75rem; /* Letra menor no mobile para não sumir nada */
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Para telas maiores (PC), a letra cresce de novo */
+@media (min-width: 768px) {
+    .nav-links { gap: 20px; }
+    .nav-links a { font-size: 0.9rem; }
+}
