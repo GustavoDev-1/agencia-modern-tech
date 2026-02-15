@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Modern Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .portfolio-header { padding: 100px 10% 50px; text-align: center; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; padding: 0 10% 80px; }
+        .project-card { background: var(--card-bg); border-radius: 20px; overflow: hidden; border: 1px solid var(--border); transition: 0.4s ease; display: flex; flex-direction: column; }
+        .project-card:hover { transform: translateY(-12px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); }
+        .project-image { width: 100%; height: 220px; background: linear-gradient(135deg, #2c3e50, #4a627a); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.2); font-weight: bold; }
+        .project-info { padding: 25px; flex-grow: 1; }
+        .project-category { color: var(--secondary); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 8px; display: block; }
+        .project-info h3 { margin-bottom: 12px; font-size: 1.4rem; color: var(--text-light); }
+        .project-info p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 20px; }
+        .project-tags { display: flex; gap: 8px; margin-bottom: 25px; flex-wrap: wrap; }
+        .tag { background: rgba(255, 255, 255, 0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.7rem; border: 1px solid var(--border); }
+        .project-link { display: inline-block; color: var(--primary); text-decoration: none; font-weight: 600; transition: 0.3s; cursor: pointer; }
+        .project-link:hover { color: var(--secondary); transform: translateX(5px); }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">MODERN<span>TECH</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html" class="btn-nav">Fale Conosco</a></li>
+        </ul>
+    </nav>
+
+    <header class="portfolio-header">
+        <h1 class="gradient-text" style="font-size: 3rem;">Nosso Portfólio</h1>
+        <p>Projetos reais para pessoas reais.</p>
+    </header>
+
+    <section class="portfolio-grid">
+        
+        <div class="project-card">
+            <div class="project-image"><span>ARTISAN</span></div>
+            <div class="project-info">
+                <span class="project-category">E-commerce</span>
+                <h3>Artisan Boutique</h3>
+                <p>Loja online minimalista focada em moda autoral.</p>
+                <div class="project-tags">
+                    <span class="tag">Shopify</span>
+                </div>
+                <a href="projeto-artisan.html" class="project-link">Visualizar Projeto →</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image"><span>EDUCAMAIS</span></div>
+            <div class="project-info">
+                <span class="project-category">Educação</span>
+                <h3>EducaMais Portal</h3>
+                <p>Plataforma interativa de cursos e gamificação.</p>
+                <div class="project-tags">
+                    <span class="tag">React</span>
+                </div>
+                <a href="projetoeducamais.html" class="project-link">Visualizar Projeto →</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image"><span>VIDA ATIVA</span></div>
+            <div class="project-info">
+                <span class="project-category">Health Tech</span>
+                <h3>Vida Ativa App</h3>
+                <p>Monitoramento de saúde e bem-estar diário.</p>
+                <div class="project-tags">
+                    <span class="tag">Mobile</span>
+                </div>
+                <a href="projeto-vidaativa.html" class="project-link">Visualizar Projeto →</a>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>
