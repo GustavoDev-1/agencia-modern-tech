@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaMais Portal | Portfólio Modern Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-header { padding: 120px 10% 60px; background: linear-gradient(135deg, var(--bg-dark) 0%, #34495e 100%); text-align: center; }
+        .container-detalhes { max-width: 1000px; margin: -60px auto 100px; background: var(--card-bg); padding: 40px; border-radius: 25px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+        .mockup-vibrante { width: 100%; height: 500px; background: #2c3e50; border-radius: 15px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; border: 5px solid var(--primary); overflow: hidden; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 50px; border-bottom: 1px solid var(--border); padding-bottom: 30px; }
+        .info-item h4 { color: var(--secondary); text-transform: uppercase; font-size: 0.8rem; }
+        .texto-projeto h2 { margin-bottom: 20px; }
+        .texto-projeto p { color: rgba(255,255,255,0.7); margin-bottom: 20px; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo">MODERN<span>TECH</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html" class="btn-nav">Fale Conosco</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-header">
+        <span style="color: var(--secondary); font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">Portal de Educação</span>
+        <h1 class="gradient-text" style="font-size: 3rem; margin-top: 10px;">EducaMais Portal</h1>
+    </header>
+
+    <main class="container-detalhes">
+        <div class="mockup-vibrante">
+            <span style="color: var(--text-light); opacity: 0.5;">[ PRINT DO PORTAL EDUCACIONAL ]</span>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-item"><h4>Cliente</h4><p>EducaMais Brasil</p></div>
+            <div class="info-item"><h4>Tecnologias</h4><p>React, Node.js, Design Sistêmico</p></div>
+            <div class="info-item"><h4>Foco</h4><p>Acessibilidade e Gamificação</p></div>
+        </div>
+
+        <article class="texto-projeto">
+            <h2>Aprendizado com <span class="gradient-text">Engajamento</span></h2>
+            <p>O desafio para o EducaMais era criar uma plataforma onde os alunos não se sentissem entediados. Criamos um sistema visual baseado em conquistas e progresso claro.</p>
+            <p>A interface foi desenhada para ser inclusiva, com alto contraste e navegação simplificada, garantindo que qualquer pessoa, independente da habilidade técnica, consiga aprender com facilidade.</p>
+        </article>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="portfolio.html" class="btn-secondary">← Voltar</a>
+            <a href="contato.html" class="btn-primary" style="margin-left: 20px;">Quero um portal assim</a>
+        </div>
+    </main>
+</body>
+</html>
