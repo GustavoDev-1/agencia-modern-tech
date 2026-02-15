@@ -3,253 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Tech | Soluções Digitais</title>
+    <title>Modern Tech | Conectando Ideias, Criando o Futuro</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Cores e Estilos para uma Estética Criativa e Vibrante (NÃO IA) */
         :root {
-            --cor-coral: #F76C6C;
-            --cor-sol: #FFC06A;
-            --fundo-noite: #2c3e50;
-            --texto-claro: #ecf0f1;
-            --caixa-destaque: #34495e;
-            --linha-suave: rgba(255, 255, 255, 0.1);
+            --primary: #F76C6C; /* Um vermelho/coral vibrante */
+            --secondary-accent: #FFC06A; /* Um laranja/amarelo quente */
+            --background-dark: #2c3e50; /* Azul escuro quase preto, mas mais suave */
+            --text-light: #ecf0f1; /* Cinza claro para textos */
+            --card-bg: #34495e; /* Fundo mais escuro para cards */
+            --border-color: rgba(255, 255, 255, 0.1);
         }
 
         body {
-            background-color: var(--fundo-noite);
-            color: var(--texto-claro);
-            margin: 0;
-            font-family: 'Inter', sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-light);
         }
 
-        .barra-topo {
-            background: var(--fundo-noite);
-            border-bottom: 1px solid var(--linha-suave);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 6%;
-            position: sticky;
-            top: 0;
-            z-index: 999;
+        /* Navbar */
+        #navbar {
+            background: var(--background-dark);
+            border-bottom: 1px solid var(--border-color);
         }
-
-        .marca-site { 
-            font-size: 1.6rem; 
-            font-weight: 800; 
-            text-decoration: none; 
+        .logo { color: var(--text-light); }
+        .logo span { color: var(--primary); }
+        .nav-links li a { color: var(--text-light); }
+        .nav-links li a:hover { color: var(--primary); }
+        .btn-nav { 
+            background: var(--primary); 
             color: white; 
+            border: none; 
+            padding: 8px 18px; 
+            border-radius: 5px; 
+            font-weight: 600;
         }
+        .btn-nav:hover { background: var(--secondary-accent); }
 
-        .marca-site span { 
-            color: var(--cor-coral); 
-        }
-
-        .links-navegacao { 
-            display: flex; 
-            list-style: none; 
-            gap: 22px; 
-            margin: 0; 
-            padding: 0; 
-        }
-
-        .links-navegacao a { 
-            color: var(--texto-claro); 
-            text-decoration: none; 
-            font-size: 0.85rem; 
-            font-weight: 500; 
-        }
-
-        .links-navegacao a:hover { 
-            color: var(--cor-coral); 
-        }
-
-        .botao-contato-topo {
-            background: var(--cor-coral);
-            color: white !important;
-            padding: 10px 22px;
-            border-radius: 6px;
-            font-weight: 700;
-        }
-
-        .area-destaque {
-            padding: 140px 10%;
+        /* Hero Section - Mais calorosa e convidativa */
+        .hero {
+            background: linear-gradient(135deg, var(--background-dark) 0%, #4a627a 100%); /* Gradiente suave */
+            padding: 150px 10%;
             text-align: center;
-            background: radial-gradient(circle at top, #3e5871, var(--fundo-noite));
         }
 
-        .area-destaque h1 {
-            font-size: 3.2rem;
-            margin-bottom: 20px;
-            line-height: 1.1;
+        .hero h1 {
+            color: var(--text-light);
+            font-size: 3.5rem;
+            max-width: 900px;
+            margin: 0 auto 25px;
+            line-height: 1.2;
         }
 
-        .texto-degrade {
-            background: linear-gradient(to right, var(--cor-coral), var(--cor-sol));
+        .gradient-text {
+            background: linear-gradient(45deg, var(--primary), var(--secondary-accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .chamada-acao {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 45px;
+        .hero p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
         }
 
-        .btn-principal, .btn-vazado {
-            padding: 18px 38px;
-            border-radius: 10px;
+        /* Botões do Hero */
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 16px 35px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            transition: 0.4s;
+            display: inline-block;
+            transition: 0.3s ease;
+            box-shadow: 0 5px 15px rgba(247, 108, 108, 0.4);
+        }
+        .btn-primary:hover {
+            background: var(--secondary-accent);
+            box-shadow: 0 5px 15px rgba(255, 192, 106, 0.6);
+            transform: translateY(-2px);
         }
 
-        .btn-principal { 
-            background: var(--cor-coral); 
-            color: white; 
-            border: none; 
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--primary);
+            padding: 16px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+            margin-left: 20px;
+        }
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
         }
 
-        .btn-vazado { 
-            border: 2px solid var(--cor-coral); 
-            color: white; 
+        /* Seção de Planos - Mais convidativa */
+        .pricing-section {
+            padding: 100px 10%;
+            background: var(--background-dark);
         }
 
-        .btn-principal:hover { 
-            transform: scale(1.05); 
-            filter: brightness(1.1); 
+        .pricing-section h2 {
+            color: var(--text-light);
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        .pricing-section p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            margin-bottom: 60px;
         }
 
-        .sessao-planos { 
-            padding: 90px 8%; 
-            text-align: center; 
-        }
-        
-        .grade-precos {
+        .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
-            margin-top: 50px;
+            gap: 2.5rem;
         }
 
-        .card-plano {
-            background: var(--caixa-destaque);
-            padding: 50px 35px;
-            border-radius: 40px 10px;
-            border: 1px solid var(--linha-suave);
-            transition: 0.5s;
+        .price-card {
+            background: var(--card-bg);
+            padding: 45px 30px;
+            border-radius: 15px; /* Arredondamento suave */
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .card-plano:hover {
-            border-color: var(--cor-sol);
-            transform: translateY(-8px);
+        .price-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 15px var(--primary);
         }
 
-        .card-destaque {
-            border: 2px solid var(--cor-coral);
-            box-shadow: 0 15px 40px rgba(247, 108, 108, 0.2);
+        .price-card.featured {
+            background: linear-gradient(135deg, var(--primary), var(--secondary-accent));
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(247, 108, 108, 0.4);
+            color: white; /* Texto claro no card em destaque */
+        }
+        .price-card.featured h3, .price-card.featured .price, .price-card.featured .price span, .price-card.featured ul li {
+            color: white;
+        }
+        .price-card.featured ul li::before {
+             color: white; /* Checkmark branco no card em destaque */
+        }
+        .price-card.featured .btn-primary {
+            background: white;
+            color: var(--primary);
+            box-shadow: none;
+        }
+        .price-card.featured .btn-primary:hover {
+            background: #eee;
+            color: var(--secondary-accent);
         }
 
-        .valor-plano { 
-            font-size: 3.5rem; 
-            font-weight: 800; 
-            color: var(--cor-coral); 
+        .badge {
+            background: var(--secondary-accent);
+            color: var(--background-dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
         }
 
-        .valor-plano span { 
-            font-size: 1rem; 
-            opacity: 0.6; 
+        .price-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--text-light);
         }
 
-        .lista-recursos { 
-            list-style: none; 
-            padding: 0; 
-            margin: 30px 0; 
-            text-align: left; 
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 25px;
         }
 
-        .lista-recursos li { 
-            margin-bottom: 12px; 
-            display: flex; 
-            align-items: center; 
-            gap: 8px; 
+        .price span {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 400;
         }
 
-        .lista-recursos li::before { 
-            content: "→"; 
-            color: var(--cor-sol); 
+        .price-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+            text-align: left;
         }
 
-        @media (max-width: 768px) {
-            .area-destaque h1 { 
-                font-size: 2.2rem; 
-            }
+        .price-card ul li {
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-            .chamada-acao { 
-                flex-direction: column; 
-                align-items: center; 
-            }
+        .price-card ul li::before {
+            content: "✓";
+            color: var(--secondary-accent); /* Cor do checkmark */
+            font-weight: bold;
+        }
 
-            .barra-topo { 
-                padding: 15px 4%; 
-            }
-
-            .links-navegacao { 
-                gap: 12px; 
-            }
+        /* Botão dentro do card de preço */
+        .btn-price {
+            width: 90%;
+            padding: 14px 25px;
+            font-size: 0.95rem;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
 
-    <nav class="barra-topo">
-        <a href="index.html" class="marca-site">MODERN<span>TECH</span></a>
-        <ul class="links-navegacao">
+    <nav id="navbar">
+        <div class="logo">MODERN<span>TECH</span></div>
+        <ul class="nav-links">
             <li><a href="index.html">Início</a></li>
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="servicos.html">Serviços</a></li>
-            <li><a href="contato.html" class="botao-contato-topo">Contato</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html" class="btn-nav">Fale Conosco</a></li>
         </ul>
     </nav>
 
-    <main class="area-destaque">
-        <h1>Conectando sua ideia ao <span class="texto-degrade">futuro digital.</span></h1>
-        <p>Desenvolvimento focado em estética vibrante e alta performance.</p>
-        <div class="chamada-acao">
-            <a href="#planos" class="btn-principal">Ver Nossos Planos</a>
-            <a href="portfolio.html" class="btn-vazado">Ver Projetos</a>
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Crie Experiências Digitais que <span class="gradient-text">Inspiram e Conectam.</span></h1>
+            <p>Transformamos suas ideias em soluções web vibrantes e funcionais, focadas em engajamento e resultados.</p>
+            <div class="hero-btns">
+                <a href="#produtos" class="btn-primary">Nossos Planos Criativos</a>
+                <a href="portfolio.html" class="btn-secondary">Ver Projetos</a>
+            </div>
         </div>
-    </main>
+    </header>
 
-    <section id="planos" class="sessao-planos">
-        <h2>Escolha o seu <span class="texto-degrade">Caminho</span></h2>
-        
-        <div class="grade-precos">
-            <div class="card-plano">
-                <h3>Básico</h3>
-                <div class="valor-plano">199<span>/mês</span></div>
-                <ul class="lista-recursos">
-                    <li>Página Única</li>
-                    <li>Design Leve</li>
-                    <li>Suporte Via Email</li>
+    <section id="produtos" class="pricing-section">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2>Encontre o Plano Perfeito para sua <span class="gradient-text">Visão.</span></h2>
+            <p>Soluções flexíveis e poderosas para cada etapa do seu crescimento digital.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Inspire</h3>
+                <div class="price">R$ 199<span>/mês</span></div>
+                <ul>
+                    <li>Landing Page Única</li>
+                    <li>Design Responsivo</li>
+                    <li>Galeria de Imagens</li>
+                    <li>Formulário de Contato</li>
                 </ul>
-                <a href="contato.html" class="btn-principal" style="width: 80%; display: inline-block;">Assinar</a>
+                <a href="pagamento.html?preco=199&plano=Inspire" class="btn-primary btn-price">Começar Já</a>
             </div>
 
-            <div class="card-plano card-destaque">
-                <h3 style="color: var(--cor-sol);">Pro</h3>
-                <div class="valor-plano" style="color: white;">499<span>/mês</span></div>
-                <ul class="lista-recursos">
-                    <li>Até 5 Páginas</li>
-                    <li>SEO Avançado</li>
-                    <li>Painel de Controle</li>
+            <div class="price-card featured">
+                <span class="badge">MAIS POPULAR</span>
+                <h3>Crescer</h3>
+                <div class="price">R$ 499<span>/mês</span></div>
+                <ul>
+                    <li>Site com até 5 Páginas</li>
+                    <li>Otimização para SEO</li>
+                    <li>Integração com Blog</li>
+                    <li>Suporte Prioritário</li>
                 </ul>
-                <a href="contato.html" class="btn-principal" style="width: 80%; display: inline-block; background: white; color: var(--cor-coral);">Assinar</a>
+                <a href="pagamento.html?preco=499&plano=Crescer" class="btn-primary btn-price">Escolher Plano</a>
+            </div>
+
+            <div class="price-card">
+                <h3>Inovar</h3>
+                <div class="price">R$ 999<span>/mês</span></div>
+                <ul>
+                    <li>Plataforma Personalizada</li>
+                    <li>Integração de E-commerce</li>
+                    <li>Gestão <d></d>e Conteúdo (CMS)</li>
+                    <li>Consultoria Estratégica</li>
+                </ul>
+                <a href="pagamento.html?preco=999&plano=Inovar" class="btn-primary btn-price">Descobrir Mais</a>
             </div>
         </div>
     </section>
 
+    <script src="script.js"></script>
 </body>
 </html>
